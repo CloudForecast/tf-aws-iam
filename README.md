@@ -17,7 +17,7 @@ module "cloudforecast" {
 }
 
 output "main_output" {
-	value = {
+  value = {
     "cloudforecast_instructions" = "This is the ARN needed for your CloudForecast account. Please copy this value on app.cloudforecast.io"
     "iam_arn" = "${module.cloudforecast.main_output}"
   }
