@@ -7,7 +7,7 @@ resource "aws_iam_role" "cloudforecast" {
     {
       "Action": "sts:AssumeRole",
       "Principal": {
-        "AWS": "arn:aws:iam::656227328603:user/root"
+        "AWS": "arn:aws:iam::656227328603:root"
       },
       "Effect": "Allow",
       "Condition": {
@@ -37,7 +37,8 @@ resource "aws_iam_role_policy" "cloudforecast_cur_policy" {
       "Effect": "Allow",
       "Resource": [
         "arn:aws:s3:::${var.cur_bucket}",
-        "arn:aws:s3:::${var.cur_bucket}/*"
+        "arn:aws:s3:::${var.cur_bucket}/*",
+        "arn:aws:s3:::${var.cur_bucket}2/*"
       ]
     }
   ]
