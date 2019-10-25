@@ -36,7 +36,7 @@ output "main_output" {
 
 | Name | Description |
 |------|-------------|
-| arn_iam | ARN of the newly created IAM role. Please copy this value on app.cloudforecast.io as part of our onboarding flow.|
+| arn_iam | ARN of the newly created IAM role. Please copy this value on [app.cloudforecast.io](https://app.cloudforecast.io) as part of our onboarding flow.|
 
 
 ## Support
