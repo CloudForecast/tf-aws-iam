@@ -12,8 +12,8 @@ Terraform module that creates the CloudForecast Role.
 ```hcl
 module "cloudforecast" {
   source      = "git::https://github.com/CloudForecast/tf-aws-iam?ref=master"
-  external_id = "[ENTER_EXTERNAL_ID]"
-  cur_bucket  = "[ENTER_CUR_BUCKET]"
+  external_id = "[REPLACE_WITH_EXTERNAL_ID]"
+  cur_bucket  = "[REPLACE_WITH_CUR_BUCKET]"
 }
 
 output "main_output" {
