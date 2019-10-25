@@ -32,6 +32,12 @@ output "main_output" {
 | cur_bucket | The S3 bucked used to store your Cost&Usage Report file | string | - | yes |
 | role_name | The name of the role CloudForecast will use | string | `CloudForecastIAM` | no |
 
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| arn_iam | ARN of the newly created IAM role. Please copy this value on app.cloudforecast.io as part of our onboarding flow.|
+
 
 ## Support
 
