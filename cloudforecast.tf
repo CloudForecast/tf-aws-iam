@@ -80,3 +80,22 @@ resource "aws_iam_role_policy" "organization_policy" {
 }
 EOF
 }
+
+resource "aws_iam_role_policy" "savings_plan_policy" {
+  name = "OrganizationPolicy"
+  role = "${aws_iam_role.cloudforecast.id}"
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Sid": "SavingsPlanAccess",
+    "Action": [
+      "savingsplans:List*",
+      "savingsplans:Describe*"
+    ],
+    "Effect": "Allow",
+    "Resource": "*"
+  }]
+}
+EOF
+}
