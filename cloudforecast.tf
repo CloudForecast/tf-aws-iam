@@ -82,7 +82,7 @@ EOF
 }
 
 resource "aws_iam_role_policy" "savings_plan_policy" {
-  name = "OrganizationPolicy"
+  name = "SavingsPlansPolicy"
   role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
