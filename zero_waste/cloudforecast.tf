@@ -21,9 +21,9 @@ resource "aws_iam_role" "cloudforecast" {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_common_policy' {
-  name = 'CloudForecast-ZW-Common-Policy'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_common_policy" {
+  name = "CloudForecast-ZW-Common-Policy"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -40,9 +40,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_common_policy' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_organization_policy' {
-  name = 'CloudForecast-ZW-Organization-Policy'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_organization_policy" {
+  name = "CloudForecast-ZW-Organization-Policy"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -56,9 +56,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_organization_policy' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_alb_unused_policy' {
-  name = 'CloudForecast-ZW-AlbUnusedPolicy'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_alb_unused_policy" {
+  name = "CloudForecast-ZW-AlbUnusedPolicy"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -71,9 +71,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_alb_unused_policy' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_ebs_old_snapshots' {
-  name = 'CloudForecast-ZW-EbsOldSnapshots'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_ebs_old_snapshots" {
+  name = "CloudForecast-ZW-EbsOldSnapshots"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -86,9 +86,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_ebs_old_snapshots' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_ebs_unused_or_unattached' {
-  name = 'CloudForecast-ZW-EbsUnusedOrUnattached'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_ebs_unused_or_unattached" {
+  name = "CloudForecast-ZW-EbsUnusedOrUnattached"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -101,9 +101,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_ebs_unused_or_unattached' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_ec2_previous_generation' {
-  name = 'CloudForecast-ZW-Ec2PreviousGeneration'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_ec2_previous_generation" {
+  name = "CloudForecast-ZW-Ec2PreviousGeneration"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -116,9 +116,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_ec2_previous_generation' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_ec2_over_provisioned' {
-  name = 'CloudForecast-ZW-Ec2OverProvisioned'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_ec2_over_provisioned" {
+  name = "CloudForecast-ZW-Ec2OverProvisioned"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -131,9 +131,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_ec2_over_provisioned' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_elb_unused' {
-  name = 'CloudForecast-ZW-ElbUnused'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_elb_unused" {
+  name = "CloudForecast-ZW-ElbUnused"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -146,9 +146,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_elb_unused' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_rds_over_provisioned' {
-  name = 'CloudForecast-ZW-RdsOverProvisioned'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_rds_over_provisioned" {
+  name = "CloudForecast-ZW-RdsOverProvisioned"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -161,9 +161,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_rds_over_provisioned' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_rds_resize_storeage' {
-  name = 'CloudForecast-ZW-RdsResizeStoreage'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_rds_resize_storeage" {
+  name = "CloudForecast-ZW-RdsResizeStoreage"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -176,9 +176,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_rds_resize_storeage' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_rds_unused' {
-  name = 'CloudForecast-ZW-RdsUnused'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_rds_unused" {
+  name = "CloudForecast-ZW-RdsUnused"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -191,9 +191,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_rds_unused' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_rds_old_snapshot' {
-  name = 'CloudForecast-ZW-RdsOldSnapshot'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_rds_old_snapshot" {
+  name = "CloudForecast-ZW-RdsOldSnapshot"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -206,9 +206,9 @@ resource 'aws_iam_role_policy' 'cloudforecast_zw_rds_old_snapshot' {
 EOF
 }
 
-resource 'aws_iam_role_policy' 'cloudforecast_zw_s3_policy_check' {
-  name = 'CloudForecast-ZW-S3PolicyCheck'
-  role = '${aws_iam_role.cloudforecast.id}'
+resource "aws_iam_role_policy" "cloudforecast_zw_s3_policy_check" {
+  name = "CloudForecast-ZW-S3PolicyCheck"
+  role = "${aws_iam_role.cloudforecast.id}"
   policy = <<EOF
 {
   "Version" : "2012-10-17",
