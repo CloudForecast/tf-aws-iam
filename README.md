@@ -3,8 +3,8 @@
 Set of Terraform module used to create the various CloudForecast Role.
 
 ## Roles
-* **[Main Role (Cost & Usage Report)](#)**
-* **[ZeroWaste](#)**
+* **[Main Role (Cost & Usage Report)](https://github.com/CloudForecast/tf-aws-iam/tree/master/main)**
+* **[ZeroWaste](https://github.com/CloudForecast/tf-aws-iam/tree/master/zero_waste)**
 
 ## Support
 
