@@ -1,5 +1,5 @@
 resource "aws_iam_role" "cloudforecast" {
-  name               = "${var.role_name}"
+  name               = var.role_name
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -12,7 +12,7 @@ resource "aws_iam_role" "cloudforecast" {
       "Effect": "Allow",
       "Condition": {
         "StringEquals": {
-          "sts:ExternalId": "${var.external_id}"
+          "sts:ExternalId": var.external_id
         }
       }
     }
@@ -23,7 +23,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_common_policy" {
   name = "CloudForecast-ZW-Common-Policy"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -42,7 +42,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_organization_policy" {
   name = "CloudForecast-ZW-Organization-Policy"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -58,7 +58,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_alb_unused_policy" {
   name = "CloudForecast-ZW-AlbUnusedPolicy"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -73,7 +73,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_ebs_old_snapshots" {
   name = "CloudForecast-ZW-EbsOldSnapshots"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -88,7 +88,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_ebs_unused_or_unattached" {
   name = "CloudForecast-ZW-EbsUnusedOrUnattached"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -103,7 +103,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_ec2_previous_generation" {
   name = "CloudForecast-ZW-Ec2PreviousGeneration"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -118,7 +118,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_ec2_over_provisioned" {
   name = "CloudForecast-ZW-Ec2OverProvisioned"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -133,7 +133,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_elb_unused" {
   name = "CloudForecast-ZW-ElbUnused"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -148,7 +148,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_rds_over_provisioned" {
   name = "CloudForecast-ZW-RdsOverProvisioned"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -163,7 +163,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_rds_resize_storeage" {
   name = "CloudForecast-ZW-RdsResizeStoreage"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -178,7 +178,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_rds_unused" {
   name = "CloudForecast-ZW-RdsUnused"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -193,7 +193,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_rds_old_snapshot" {
   name = "CloudForecast-ZW-RdsOldSnapshot"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
@@ -208,7 +208,7 @@ EOF
 
 resource "aws_iam_role_policy" "cloudforecast_zw_s3_policy_check" {
   name = "CloudForecast-ZW-S3PolicyCheck"
-  role = "${aws_iam_role.cloudforecast.id}"
+  role = aws_iam_role.cloudforecast.id
   policy = <<EOF
 {
   "Version" : "2012-10-17",
