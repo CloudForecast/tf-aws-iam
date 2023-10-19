@@ -220,3 +220,33 @@ resource "aws_iam_role_policy" "cloudforecast_zw_s3_policy_check" {
 }
 EOF
 }
+
+resource "aws_iam_role_policy" "cloudforecast_zw_cloudwatch_policy_check" {
+  name = "CloudForecast-ZW-CloudWatchLogs"
+  role = aws_iam_role.cloudforecast.id
+  policy = <<EOF
+{
+  "Version" : "2012-10-17",
+  "Statement" : [ {
+    "Effect" : "Allow",
+    "Action" : [ "logs:DescribeLogGroups" ],
+    "Resource" : "*"
+  } ]
+}
+EOF
+}
+
+resource "aws_iam_role_policy" "cloudforecast_zw_trusted_advisor" {
+  name = "CloudForecast-ZW-TrustedAdvisor"
+  role = aws_iam_role.cloudforecast.id
+  policy = <<EOF
+{
+  "Version" : "2012-10-17",
+  "Statement" : [ {
+    "Effect" : "Allow",
+    "Action" : [ "support:DescribeTrustedAdvisorCheckRefreshStatuses", "support:DescribeTrustedAdvisorCheckResult", "support:DescribeTrustedAdvisorChecks", "support:DescribeTrustedAdvisorCheckSummaries", "support:RefreshTrustedAdvisorCheck", "trustedadvisor:Describe*" ],
+    "Resource" : "*"
+  } ]
+}
+EOF
+}
