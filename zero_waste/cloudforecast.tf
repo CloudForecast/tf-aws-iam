@@ -12,7 +12,7 @@ resource "aws_iam_role" "cloudforecast" {
       "Effect": "Allow",
       "Condition": {
         "StringEquals": {
-          "sts:ExternalId": var.external_id
+          "sts:ExternalId": "${var.external_id}"
         }
       }
     }
