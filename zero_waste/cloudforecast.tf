@@ -7,7 +7,7 @@ resource "aws_iam_role" "cloudforecast" {
     {
       "Action": "sts:AssumeRole",
       "Principal": {
-        "AWS": "arn:aws:iam::656227328603:role/CloudForecast-CustomerDataAccess-Pa7c9b"
+        "AWS": "arn:aws:iam::656227328603:role/${var.cloudforecast_access_role}"
       },
       "Effect": "Allow",
       "Condition": {

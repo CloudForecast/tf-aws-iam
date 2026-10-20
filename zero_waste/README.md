@@ -25,6 +25,8 @@ output "main_output" {
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | external_id | The external identifier to use, given to you by CloudForecast | string | - | yes |
+| role_name | The name of the role CloudForecast will use | string | `CloudForecast-ZeroWaste` | no |
+| cloudforecast_access_role | The CloudForecast IAM role allowed to assume this role | string | `CloudForecast-CustomerDataAccess-Pa7c9b` | no |
 
 ## Outputs
 
